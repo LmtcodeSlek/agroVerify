@@ -1,0 +1,82 @@
+/* ── Global Resets & Base ─────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'DM Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f7f8fa;
+    color: #333;
+}
+
+
+/* ── Form element resets (components style their own inputs) ──────────────── */
+
+input,
+select,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #2d6a4f;
+    outline-offset: 1px;
+}
+
+button:focus-visible {
+    outline: 2px solid #2d6a4f;
+    outline-offset: 2px;
+}
+
+
+/* ── Scrollbar styling ────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+
+/* ── Utility ──────────────────────────────────────────────────────────────── */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
